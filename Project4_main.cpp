@@ -200,10 +200,12 @@ int main(int argc, char** argv)
 					degree_graph[j].erase(degree_graph[j].begin()+k);
 				}
 			}
+			if(degree_graph[j][0] == deg_zero_q.front()){
+				degree_graph.erase(degree_graph.begin()+j);
+			}
 		}
 		temp_holder = deg_zero_q.front();
 		deg_zero_q.pop_front();
-		// new_adj_list.erase(new_adj_list.begin()+i);
 	}
 
 
